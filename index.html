@@ -23,24 +23,37 @@
             height: 150px;
             object-fit: cover;
         }
+        .description {
+            white-space: nowrap; /* Текст не переносится */
+            overflow: hidden; /* Обрезаем всё за пределами блока */
+            text-overflow: ellipsis; /* Добавляем многоточие */
+        }
     </style>
 </head>
 <body>
     <div class="product" onclick="showDescription(1)">
         <h3>Мясной суп</h3>
         <img src="static/soup.png" alt="Товар 1">
+        <div class="description">Вкусный суп на мясной основе</div>
+        <h5>200₽</h5>
     </div>
     <div class="product" onclick="showDescription(2)">
         <h3>Стэйк</h3>
         <img src="static/stake.png" alt="Товар 2">
+        <div class="description">Сочный стэйк из говядины средней прожарки</div>
+        <h5>250₽</h5>
     </div>
     <div class="product" onclick="showDescription(3)">
-        <h3>Товар 3</h3>
-        <img src="path_to_image_3.jpg" alt="Товар 3">
+        <h3>Рыба в кляре</h3>
+        <img src="static/fish.png" alt="Товар 3">
+        <div class="description">Мягкая рыба в чуть хрустящем кляре</div>
+        <h5>260₽</h5>
     </div>
     <div class="product" onclick="showDescription(4)">
-        <h3>Товар 4</h3>
-        <img src="path_to_image_4.jpg" alt="Товар 4">
+        <h3>Жаркое</h3>
+        <img src="static/roast.png" alt="Товар 4">
+        <div class="description">Вкусная картошка в сочетании с мясом</div>
+        <h5>300₽</h5>
     </div>
 
     <div id="description" style="display: none;">
