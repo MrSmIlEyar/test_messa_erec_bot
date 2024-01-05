@@ -27,7 +27,7 @@ async def command_start_handler(message: Message) -> None:
 @dp.message()
 async def handle_contact(message: types.ContentType.CONTACT):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
-        [types.KeyboardButton(text="Открыть веб-приложение", web_app=WebAppInfo(url="https://lichess.org/"))]
+        [types.KeyboardButton(text="Открыть веб-приложение", web_app=WebAppInfo(url="https://github.com/MrSmIlEyar/test_messa_erec_bot/blob/master/products.html"))]
     ])
     contact = message.contact
     await message.answer(f"Вы успешно зарегистрировались! \nВаш номер телефона: {contact.phone_number}", reply_markup=keyboard)
