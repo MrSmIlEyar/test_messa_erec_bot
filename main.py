@@ -6,7 +6,6 @@ from aiogram import Bot, Dispatcher, Router, types
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message, Contact, WebAppInfo
-from aiogram.utils.markdown import hbold
 import markup
 import config
 
@@ -27,7 +26,7 @@ async def command_start_handler(message: Message) -> None:
 @dp.message()
 async def handle_contact(message: types.ContentType.CONTACT):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
-        [types.KeyboardButton(text="Открыть веб-приложение", web_app=WebAppInfo(url="https://github.com/MrSmIlEyar/test_messa_erec_bot/blob/master/products.html"))]
+        [types.KeyboardButton(text="Открыть веб-приложение", web_app=WebAppInfo(url="https://mrsmileyar.github.io/test_messa_erec_bot/index.html", name="Месса/Ересь"))]
     ])
     contact = message.contact
     await message.answer(f"Вы успешно зарегистрировались! \nВаш номер телефона: {contact.phone_number}", reply_markup=keyboard)
