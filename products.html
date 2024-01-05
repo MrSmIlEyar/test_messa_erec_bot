@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Меню еды</title>
+    <style>
+        .product {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="product" onclick="showDescription(1)">
+        <h3>Товар 1</h3>
+        <img src="path_to_image_1.jpg" alt="Товар 1">
+    </div>
+    <div class="product" onclick="showDescription(2)">
+        <h3>Товар 2</h3>
+        <img src="path_to_image_2.jpg" alt="Товар 2">
+    </div>
+    <div class="product" onclick="showDescription(3)">
+        <h3>Товар 3</h3>
+        <img src="path_to_image_3.jpg" alt="Товар 3">
+    </div>
+    <div class="product" onclick="showDescription(4)">
+        <h3>Товар 4</h3>
+        <img src="path_to_image_4.jpg" alt="Товар 4">
+    </div>
+
+    <div id="description" style="display: none;">
+        <h3 id="productName"></h3>
+        <p id="productDescription"></p>
+    </div>
+
+    <script>
+        function showDescription(productId) {
+            var productName = "";
+            var productDescription = "";
+
+            switch (productId) {
+                case 1:
+                    productName = "Товар 1";
+                    productDescription = "Описание товара 1";
+                    break;
+                case 2:
+                    productName = "Товар 2";
+                    productDescription = "Описание товара 2";
+                    break;
+                case 3:
+                    productName = "Товар 3";
+                    productDescription = "Описание товара 3";
+                    break;
+                case 4:
+                    productName = "Товар 4";
+                    productDescription = "Описание товара 4";
+                    break;
+            }
+
+            document.getElementById("productName").innerHTML = productName;
+            document.getElementById("productDescription").innerHTML = productDescription;
+
+            document.getElementById("description").style.display = "block";
+        }
+    </script>
+</body>
+</html>
